@@ -1,0 +1,14 @@
+$gray: #8b8687;
+$black: #333030;
+
+body  {
+  background-color: $gray;
+  color: white;
+  header {
+    background-color: $black;
+  }
+}
+
+/*injector*/
+@import 'login/login.css';
+/*endinjector*/
