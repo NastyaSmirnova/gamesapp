@@ -57,6 +57,7 @@
 
     "globals": {
         "angular": false,
+        "Firebase": false,
         "$": true
     }
 }
