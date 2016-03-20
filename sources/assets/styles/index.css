@@ -1,13 +1,61 @@
+* {
+  line-height: 1;
+}
+
 body  {
   background-color: #8b8687;
   color: white;
+  font-family: 'Lato', sans-serif;
 }
-body header {
+
+header {
   background-color: #333030;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+header .logo, header nav, header .user {
+  display: inline-block;
+}
+
+header .logo {
+  width: 150px;
+}
+
+header .user {
+  float: right;
+  padding: 18px 0;
+}
+
+header .user a {
+  display: inline-block;
+  border: 1px solid #e3dede;
+  border-radius: 1000px;
+  padding: .5rem 1rem;
+  margin-left: 3rem
+}
+
+header .user a.login {
+  color: #f6ea8c;
+  border-color: #f6ea8c;
+}
+
+header a {
+  color: #e3dede;
+}
+
+header nav a {
+  line-height: 70px;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*injector*/
-section  {
-  background-color: #333030;
+section {
+  background-color: #a3a1a1;
 }
 /*endinjector*/

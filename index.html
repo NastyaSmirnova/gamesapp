@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Games Stats Application</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
@@ -13,16 +14,38 @@
   <!-- endinject -->
 </head>
 <body>
-  hello game app
+  <header>
+    <div class="logo">
+      <a href="#/games">Logo</a>
+    </div>
+    <nav>
+      <a href="#/users">Users</a>
+      <a href="#/games">Your Games</a>
+    </nav>
+    <div class="user">
+      <a href="#/auth/signup" class="signup">
+        Sign up
+      </a>
+      <a href="#/auth/login" class="login">
+        Log in
+      </a>
+    </div>
+  </header>
+  <main>
+    <div data-ui-view></div>
+  </main>
 
   <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/firebase/firebase.js"></script>
   <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
 
   <!-- inject:js -->
   <script src="sources/app/index.js"></script>
+  <script src="sources/app/auth/auth.module.js"></script>
+  <script src="sources/app/auth/auth.controller.js"></script>
   <!-- endinject -->
 </body>
 </html>

@@ -1,14 +1,58 @@
 $gray: #8b8687;
 $black: #333030;
+$white: #e3dede;
+$yellow: #f6ea8c;
+$lightGray: #a3a1a1;
+
+* {
+  line-height: 1;
+}
 
 body  {
   background-color: $gray;
   color: white;
-  header {
-    background-color: $black;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  background-color: $black;
+  padding: 0 1rem;
+  overflow: hidden;
+  .logo, nav, .user {
+    display: inline-block;
+  }
+  .logo {
+    width: 150px;
+  }
+  .user {
+    float: right;
+    padding: 18px 0;
+    a {
+      display: inline-block;
+      border: 1px solid $white;
+      border-radius: 1000px;
+      padding: .5rem 1rem;
+      margin-left: 3rem;
+      &.login {
+        color: $yellow;
+        border-color: $yellow;
+      }
+    }
+  }
+  a {
+    color: $white;
+  }
+  nav a {
+    line-height: 70px;
+    margin-right: 1rem;
+    display: inline-block;
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 /*injector*/
-@import 'login/login.css';
+@import 'auth/auth.css';
 /*endinjector*/
