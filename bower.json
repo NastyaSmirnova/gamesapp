@@ -2,6 +2,8 @@
   "name": "noaccident",
   "version": "0.0.1",
   "dependencies": {
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "angular": "angularjs#~1.5.2",
+    "angularfire": "~1.1.4"
   }
 }
