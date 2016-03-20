@@ -4,8 +4,14 @@
 
 body  {
   background-color: #8b8687;
-  color: white;
   font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  border: 0;
+  outline: none;
 }
 
 header {
@@ -32,7 +38,7 @@ header .user a {
   border: 1px solid #e3dede;
   border-radius: 1000px;
   padding: .5rem 1rem;
-  margin-left: 3rem
+  margin-left: 2rem
 }
 
 header .user a.login {
@@ -50,12 +56,83 @@ header nav a {
   display: inline-block;
 }
 
-a {
-  text-decoration: none;
-}
-
 /*injector*/
-section {
+section.auth-container {
   background-color: #a3a1a1;
+  width: 350px;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin: 25vh auto;
+}
+section.auth-container form label {
+  display: block;
+  color: #333030;
+  font-size: small;
+  color: #f6ea8c;
+}
+section.auth-container form input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #e3dede;
+  color: #e3dede;
+  display: block;
+  width: 100%;
+  outline: none;
+  line-height: 2.5;
+  margin-bottom: 2rem;
+}
+section.auth-container form button[type=submit] {
+  background-color: transparent;
+  border: 1px solid #f6ea8c;
+  color: #f6ea8c;
+  border-radius: 1000px;
+  width: 100px;
+  line-height: 2;
+  margin: 0 auto;
+  display: block;
+}
+section.auth-container ::-webkit-input-placeholder {
+  color: #e3dede;
+}
+section.auth-container ::-moz-placeholder {
+  color: #e3dede;
+}
+section.auth-container :-moz-placeholder {
+  color: #e3dede;
+}
+section.auth-container :-ms-input-placeholder {
+  color: #e3dede;
+}
+section.auth-container ::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+section.auth-container ::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+section.auth-container :-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+section.auth-container :-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+section.auth-container input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+section.auth-container input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+section.auth-container input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+section.auth-container input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 /*endinjector*/

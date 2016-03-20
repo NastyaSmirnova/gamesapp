@@ -10,8 +10,14 @@ $lightGray: #a3a1a1;
 
 body  {
   background-color: $gray;
-  color: white;
   font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  border: 0;
+  outline: none;
 }
 
 header {
@@ -32,7 +38,7 @@ header {
       border: 1px solid $white;
       border-radius: 1000px;
       padding: .5rem 1rem;
-      margin-left: 3rem;
+      margin-left: 2rem;
       &.login {
         color: $yellow;
         border-color: $yellow;
@@ -47,10 +53,6 @@ header {
     margin-right: 1rem;
     display: inline-block;
   }
-}
-
-a {
-  text-decoration: none;
 }
 
 /*injector*/
