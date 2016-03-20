@@ -10,6 +10,9 @@ body  {
 
 a {
   text-decoration: none;
+}
+
+a, input, button, [type=submit] {
   border: 0;
   outline: none;
 }
@@ -69,6 +72,12 @@ section.auth-container form label {
   color: #333030;
   font-size: small;
   color: #f6ea8c;
+}
+section.auth-container form .error label {
+  color: #cf253a;
+}
+section.auth-container form .error input {
+  border-color: #cf253a;
 }
 section.auth-container form input {
   background-color: transparent;

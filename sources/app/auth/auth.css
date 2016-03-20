@@ -11,6 +11,14 @@ section.auth-container {
       font-size: small;
       color: $yellow;
     }
+    .error {
+      label {
+        color: $red;
+      }
+      input {
+        border-color: $red;
+      }
+    }
     input {
       background-color: transparent;
       border: 0;

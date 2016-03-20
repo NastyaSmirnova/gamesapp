@@ -1,18 +1,33 @@
 <section class="auth-container">
-  <form action="">
-    <div class="field"></div>
-    <label for="email">e-mail</label>
-    <input
+  <form
+    name="authForm"
+    role="form"
+    data-ng-submit="authForm.$valid && auth[currentAction].action(auth.user);"
+    novalidate>
+    <div data-ng-class="{ 'error': authForm.email.$invalid && auth.submitted }">
+      <label for="email">e-mail</label>
+      <input
       type="email"
       id="email"
       name="email"
-      placeholder="johndoe@gmail.com">
-    <label for="password">password</label>
-    <input
+      placeholder="johndoe@gmail.com"
+      data-ng-model="auth.user.email"
+      required>
+    </div>
+    <div data-ng-class="{ 'error': authForm.password.$invalid && auth.submitted }">
+      <label for="password">password</label>
+      <input
       type="password"
       id="password"
       name="password"
-      placeholder="johndoepass">
-    <button type="submit">Log in!</button>
+      placeholder="johndoepass"
+      data-ng-model="auth.user.password"
+      required>
+    </div>
+    <button
+      type="submit"
+      data-ng-click="auth.submitted = true;"
+      data-ng-bind="auth[currentAction].label">
+    </button>
   </form>
 </section>

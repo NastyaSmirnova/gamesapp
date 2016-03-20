@@ -23,10 +23,10 @@
       <a href="#/games">Your Games</a>
     </nav>
     <div class="user">
-      <a href="#/auth" class="signup">
+      <a data-ui-sref="auth.signup" class="signup">
         Sign up
       </a>
-      <a href="#/auth" class="login">
+      <a data-ui-sref="auth.login" class="login">
         Log in
       </a>
     </div>
@@ -46,6 +46,8 @@
   <script src="sources/app/index.js"></script>
   <script src="sources/app/auth/auth.module.js"></script>
   <script src="sources/app/auth/auth.controller.js"></script>
+  <script src="sources/app/auth/auth.service.js"></script>
+  <script src="sources/app/main/firebase.service.js"></script>
   <!-- endinject -->
 </body>
 </html>

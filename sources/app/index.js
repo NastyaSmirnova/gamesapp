@@ -9,6 +9,7 @@
       'games.auth'
     ])
     .constant('Settings', {
+      firebaseUrl: 'https://gamesapp.firebaseio.com/',
     	roles: {
     		1: {
     			name: 'superadmin',
@@ -21,7 +22,7 @@
     	}
     })
     .config(function ($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('/auth');
+      $urlRouterProvider.otherwise('/auth/login');
 
       $stateProvider
         .state('auth', {
@@ -29,6 +30,14 @@
           templateUrl: 'sources/app/auth/auth.html',
           controller: 'AuthCtrl',
           controllerAs: 'auth'
+        })
+        .state('auth.signup', {
+          url: '/signup',
+          action: 'signup'
+        })
+        .state('auth.login', {
+          url: '/login',
+          action: 'login'
         });
     });
 
