@@ -1,3 +1,49 @@
-<form action="">
-  games form
+<form
+  name="gamesForm"
+  role="form"
+  data-ng-submit="gamesForm.$valid && edit.saveGame();"
+  novalidate>
+  <div data-ng-class="{ 'error': gamesForm.name.$invalid && edit.submitted }">
+    <label for="name">Game Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Pocker"
+      data-ng-model="edit.current.name"
+      required>
+  </div>
+  <div class="rating">
+    <label>Rating</label>
+    <span>&#9734;</span>
+    <span>&#9734;</span>
+    <span>&#9734;</span>
+    <span>&#9733;</span>
+    <span>&#9733;</span>
+  </div>
+  <div class="number-input">
+    <label for="name">Spent Time</label>
+    <button data-ng-click="edit.current.time = edit.current.time + 1;">+</button>
+    <input
+      type="number"
+      id="time"
+      name="time"
+      placeholder="3"
+      data-ng-model="edit.current.time">
+    <button data-ng-click="edit.current.time = edit.current.time - 1;">-</button>
+  </div>
+  <div class="actions">
+    <button
+      type="submit"
+      data-ng-click="edit.submitted = true;">
+      Save
+    </button>
+    <a
+      type="button"
+      class="white"
+      data-ng-click="games.formOpen = false;"
+      data-ui-sref="games">
+      Cancel
+    </a>
+  </div>
 </form>

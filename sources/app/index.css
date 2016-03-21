@@ -28,6 +28,8 @@ header {
   background-color: $black;
   padding: 0 1rem;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
   .logo, nav, .user {
     display: inline-block;
   }
@@ -69,7 +71,7 @@ aside {
   top: 0;
   height: 100%;
   width: 350px;
-  z-index: -1;
+  z-index: 0;
   padding: 2rem;
   padding-top: calc(70px + 2rem);
   box-sizing: border-box;
@@ -77,6 +79,93 @@ aside {
 
 .pointer {
   cursor: pointer;
+}
+
+form {
+  label {
+    display: block;
+    color: $black;
+    font-size: small;
+    color: $yellow;
+  }
+  .error {
+    label {
+      color: $red;
+    }
+    input {
+      border-color: $red;
+    }
+  }
+  input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $white;
+    color: $white;
+    display: block;
+    width: 100%;
+    outline: none;
+    line-height: 2.5;
+    margin-bottom: 2rem;
+  }
+  [type=submit], button, a[type=button] {
+    background-color: transparent;
+    border: 1px solid $yellow;
+    color: $yellow;
+    border-radius: 1000px;
+    width: 100px;
+    line-height: 2;
+    margin: 0 auto;
+    display: block;
+  }
+  a[type=button].white {
+    color: $white;
+    border-color: $white;
+  }
+}
+::-webkit-input-placeholder {
+  color: $white;
+}
+::-moz-placeholder {
+  color: $white;
+}
+:-moz-placeholder {
+  color: $white;
+}
+:-ms-input-placeholder {
+  color: $white;
+}
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /*injector*/
