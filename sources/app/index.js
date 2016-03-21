@@ -6,7 +6,8 @@
     .module('app', [
       'ui.router',
       'firebase',
-      'app.auth'
+      'app.auth',
+      'app.games'
     ])
     .constant('Settings', {
       firebaseUrl: 'https://gamesapp.firebaseio.com/',
@@ -38,6 +39,18 @@
         .state('auth.login', {
           url: '/login',
           action: 'login'
+        })
+        .state('games', {
+          url: '/games',
+          templateUrl: 'sources/app/games/games.html',
+          controller: 'GamesCtrl',
+          controllerAs: 'games'
+        })
+        .state('games.edit', {
+          url: '/:id',
+          templateUrl: 'sources/app/games/games.form.html',
+          controller: 'GamesFormCtrl',
+          controllerAs: 'edit'
         });
     });
 
