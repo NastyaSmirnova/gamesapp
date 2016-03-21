@@ -3,47 +3,37 @@
     <section class="games-new pointer">
       <a data-ui-sref=".edit({ id: 0 })">+</a>
     </section>
-    <section data-ng-repeat="game in games.list">
+    <section data-ng-repeat="game in (gamesList = games.list | filter:search)">
+      <div class="games-rating">
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+        <span>&#9733;</span>
+      </div>
+      <div class="games-time">
+        <span>&#9719;&nbsp;<span data-ng-bind="game.time"></span></span>
+      </div>
       <a
         class="games-heading"
         data-ng-bind="game.name"
         data-ui-sref=".edit({ id: game.$id })"></a>
     </section>
-    <section>
-      <div class="games-rating">
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9733;</span>
-      </div>
-      <div class="games-time">
-        <span>&#9719;&nbsp;2</span>
-      </div>
-      <a class="games-heading">
-        Portland Pocker Club
-      </a>
-    </section>
-    <section>
-      <div class="games-rating">
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9733;</span>
-        <span>&#9733;</span>
-      </div>
-      <div class="games-time">
-        <span>&#9719;&nbsp;11</span>
-      </div>
-      <a class="games-heading">
-        True Pocker
-      </a>
-    </section>
   </div>
   <aside>
-    <div class="message-info" data-ng-hide="games.formOpen">
+    <div class="message-info" data-ng-hide="games.formOpen || gamesList.length">
       <p>You don't play any game now</p>
       <button>Let's have some fun!</button>
+    </div>
+    <div class="games-filters" data-ng-hide="games.formOpen || !gamesList.length">
+      <form action="">
+        <label for="search">Search</label>
+        <input
+          type="search"
+          data-ng-model="search"
+          placeholder="e.g.: Pocker"
+          id="search">
+      </form>
     </div>
     <div data-ui-view></div>
   </aside>

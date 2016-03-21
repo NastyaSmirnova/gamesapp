@@ -252,6 +252,7 @@ section.auth-container {
   color: #f6ea8c;
   z-index: 2;
   position: relative;
+  display: block;
 }
 .games-container aside form .rating {
   color: #e3dede;
