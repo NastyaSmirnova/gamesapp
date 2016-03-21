@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('games.auth')
+    .module('app.auth')
     .factory('authService', function (
       $firebaseAuth,
       firebaseDataService

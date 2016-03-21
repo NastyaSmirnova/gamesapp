@@ -3,10 +3,10 @@
   'use strict';
 
   angular
-    .module('games', [
+    .module('app', [
       'ui.router',
       'firebase',
-      'games.auth'
+      'app.auth'
     ])
     .constant('Settings', {
       firebaseUrl: 'https://gamesapp.firebaseio.com/',

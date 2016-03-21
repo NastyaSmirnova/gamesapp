@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('games')
+    .module('app')
     .factory('firebaseDataService', function (Settings) {
         var firebaseUrl = Settings.firebaseUrl;
         var root = new Firebase(firebaseUrl);
@@ -14,5 +14,5 @@
 
         return service;
       });
-      
+
 })();

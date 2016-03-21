@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('games.auth')
+  angular.module('app.auth')
     .controller('AuthCtrl', function (
       $rootScope,
       $scope,
