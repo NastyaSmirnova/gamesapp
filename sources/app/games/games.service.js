@@ -3,7 +3,7 @@
 
   angular
     .module('app.games')
-    .factory('authService', function () {
+    .factory('gamesService', function () {
 
       return {};
 

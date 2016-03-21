@@ -31,7 +31,7 @@
       function login (user) {
         return authService.login(user)
           .then(function () {
-            // $location.path('/games');
+            $location.path('/games');
             console.log('success');
           })
           .catch(function (error) {

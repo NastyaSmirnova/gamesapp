@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="sources/assets/styles/index.css">
   <!-- endinject -->
 </head>
-<body>
+<body data-ng-controller="MainCtrl" data-ng-cloak>
   <header>
     <div class="logo">
       <a href="#/games">&#9831;&nbsp;Clubs</a>
@@ -23,11 +23,14 @@
       <a href="#/games">Games</a>
     </nav>
     <div class="user">
-      <a data-ui-sref="auth.signup" class="signup">
+      <a data-ui-sref="auth.signup" class="signup pointer" data-ng-if="!me.status">
         Sign up
       </a>
-      <a data-ui-sref="auth.login" class="login">
+      <a data-ui-sref="auth.login" class="login pointer" data-ng-if="!me.status">
         Log in
+      </a>
+      <a data-ng-click="logOut();" class="login pointer" data-ng-if="me.status">
+        Log out
       </a>
     </div>
   </header>
@@ -52,6 +55,7 @@
   <script src="sources/app/games/games.form.controller.js"></script>
   <script src="sources/app/games/games.service.js"></script>
   <script src="sources/app/main/firebase.service.js"></script>
+  <script src="sources/app/main/main.controller.js"></script>
   <!-- endinject -->
 </body>
 </html>

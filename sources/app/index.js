@@ -52,6 +52,22 @@
           controller: 'GamesFormCtrl',
           controllerAs: 'edit'
         });
+    })
+    .run(function ($rootScope, $location, authService) {
+      $rootScope.$on('$stateChangeStart', function(event, next, previous) {
+        var authData = authService.isLoggedIn();
+
+        if (authData) {
+          $rootScope.me = {
+            email: authData.password.email,
+            uid: authData.password.uid,
+            status: true
+          };
+        } else {
+          $rootScope.me = {};
+          $location.path('/auth/login');
+        }
+      });
     });
 
 })();
