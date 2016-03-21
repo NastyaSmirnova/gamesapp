@@ -36,6 +36,7 @@
           color: $yellow;
           z-index: 2;
           position: relative;
+          display: block;
         }
       }
       .games-rating {

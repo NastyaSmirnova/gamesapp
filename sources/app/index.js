@@ -60,7 +60,7 @@
         if (authData) {
           $rootScope.me = {
             email: authData.password.email,
-            uid: authData.password.uid,
+            uid: authData.uid,
             status: true
           };
         } else {

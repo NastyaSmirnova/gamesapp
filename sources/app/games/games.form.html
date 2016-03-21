@@ -1,7 +1,7 @@
 <form
   name="gamesForm"
   role="form"
-  data-ng-submit="gamesForm.$valid && edit.saveGame();"
+  data-ng-submit="gamesForm.$valid && edit.saveGame(edit.current);"
   novalidate>
   <div data-ng-class="{ 'error': gamesForm.name.$invalid && edit.submitted }">
     <label for="name">Game Name</label>
@@ -9,7 +9,7 @@
       type="text"
       id="name"
       name="name"
-      placeholder="Pocker"
+      placeholder="e.g.: Pocker"
       data-ng-model="edit.current.name"
       required>
   </div>
@@ -22,15 +22,23 @@
     <span>&#9733;</span>
   </div>
   <div class="number-input">
-    <label for="name">Spent Time</label>
-    <button data-ng-click="edit.current.time = edit.current.time + 1;">+</button>
+    <label for="name">Spent Hours</label>
+    <button
+      data-ng-click="edit.current.time = edit.current.time + 1;"
+      type="button">
+      +
+    </button>
     <input
       type="number"
       id="time"
       name="time"
-      placeholder="3"
+      placeholder="0"
       data-ng-model="edit.current.time">
-    <button data-ng-click="edit.current.time = edit.current.time - 1;">-</button>
+    <button
+      data-ng-click="edit.current.time = edit.current.time - 1;"
+      type="button">
+      -
+    </button>
   </div>
   <div class="actions">
     <button

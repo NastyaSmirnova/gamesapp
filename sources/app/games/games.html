@@ -3,6 +3,12 @@
     <section class="games-new pointer">
       <a data-ui-sref=".edit({ id: 0 })">+</a>
     </section>
+    <section data-ng-repeat="game in games.list">
+      <a
+        class="games-heading"
+        data-ng-bind="game.name"
+        data-ui-sref=".edit({ id: game.$id })"></a>
+    </section>
     <section>
       <div class="games-rating">
         <span>&#9734;</span>
