@@ -28,6 +28,7 @@
           gamesService.save(game);
         }
 
+        $scope.games.formOpen = false;
         $location.path('/games');
       }
 

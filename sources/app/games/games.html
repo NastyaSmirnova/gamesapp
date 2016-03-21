@@ -3,7 +3,7 @@
     <section class="games-new pointer">
       <a data-ui-sref=".edit({ id: 0 })">+</a>
     </section>
-    <section data-ng-repeat="game in (gamesList = games.list | filter:search)">
+    <section data-ng-repeat="game in (gamesList = games.list | filter:search) | orderBy:sortType:false">
       <div class="games-rating">
         <span>&#9734;</span>
         <span>&#9734;</span>
@@ -33,6 +33,15 @@
           data-ng-model="search"
           placeholder="e.g.: Pocker"
           id="search">
+        <label for="sortBy">Sort By</label>
+        <select
+          id="sortBy"
+          data-ng-model="sortType">
+          <option value="" disabled="">Select criteria</option>
+          <option value="timestamp">Date</option>
+          <option value="rating">Rating</option>
+          <option value="time">Hours spent</option>
+        </select>
       </form>
     </div>
     <div data-ui-view></div>

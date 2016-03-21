@@ -12,7 +12,7 @@ a {
   text-decoration: none;
 }
 
-a, input, button, [type=submit] {
+a, input, button, [type=submit], select {
   border: 0;
   outline: none;
 }
@@ -97,7 +97,7 @@ form .error input {
   border-color: #cf253a;
 }
 
-form input {
+form input, form select {
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #e3dede;
@@ -107,6 +107,15 @@ form input {
   outline: none;
   line-height: 2.5;
   margin-bottom: 2rem;
+  border-radius: 0;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form select {
+  cursor: pointer;
 }
 
 form [type=submit], form button, form a[type=button] {
