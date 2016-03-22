@@ -19,13 +19,13 @@
       <a href="#/games">&#9831;&nbsp;Clubs</a>
     </div>
     <div class="user">
-      <a data-ui-sref="auth.signup" class="signup pointer" data-ng-if="!me.status">
+      <a data-ui-sref="auth.signup" class="signup pointer ng-hide" data-ng-show="!me.status">
         Sign up
       </a>
-      <a data-ui-sref="auth.login" class="login pointer" data-ng-if="!me.status">
+      <a data-ui-sref="auth.login" class="login pointer ng-hide" data-ng-show="!me.status">
         Log in
       </a>
-      <a data-ng-click="logOut();" class="login pointer" data-ng-if="me.status">
+      <a data-ng-click="logOut();" class="login pointer ng-hide" data-ng-show="me.status">
         Log out
       </a>
     </div>

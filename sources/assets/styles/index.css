@@ -76,6 +76,9 @@ aside {
 .pointer {
   cursor: pointer;
 }
+.ng-hide {
+  display: none !important;
+}
 
 .pagination {
   text-align: center;
