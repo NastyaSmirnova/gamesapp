@@ -62,11 +62,15 @@ header a {
 header nav a {
   line-height: 70px;
   margin-right: 1rem;
-  display: inline-block;
+  display: inline-block
+}
+
+header nav a.active {
+  color: #f6ea8c;
 }
 
 aside {
-  background-color: #a3a1a1;
+  background-color: #a19d9d;
   position: fixed;
   right: 0;
   top: 0;
@@ -181,7 +185,7 @@ input:focus:-ms-input-placeholder {
 
 /*injector*/
 section.auth-container {
-  background-color: #a3a1a1;
+  background-color: #a19d9d;
   width: 350px;
   box-sizing: border-box;
   padding: 2rem;
@@ -196,8 +200,6 @@ section.auth-container {
   box-sizing: border-box;
 }
 .games-container .games-list section {
-
-  /*background-color: $lightGray;*/
   height: 200px;
   color: #e3dede;
   width: 31%;
@@ -206,10 +208,6 @@ section.auth-container {
   vertical-align: top;
   text-align: center;
   position: relative;
-
-  /*&:not(.games-new) {
-        background-image: url('http://www.theportlandarms.co.uk/UserFiles/Image/Poker/PortlandPokerLogo.gif');
-      } */
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center center;

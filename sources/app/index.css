@@ -61,6 +61,9 @@ header {
     line-height: 70px;
     margin-right: 1rem;
     display: inline-block;
+    &.active {
+      color: $yellow;
+    }
   }
 }
 
@@ -178,6 +181,7 @@ input:focus:-ms-input-placeholder {
 }
 
 /*injector*/
-@import 'games/games.css';
 @import 'auth/auth.css';
+@import 'games/games.css';
+@import 'users/users.css';
 /*endinjector*/
