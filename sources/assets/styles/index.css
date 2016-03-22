@@ -199,6 +199,22 @@ input:focus:-ms-input-placeholder {
 }
 
 /*injector*/
+section.auth-container {
+  background-color: #a19d9d;
+  width: 350px;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin: 25vh auto;
+}
+section.auth-container .error-message {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+section.auth-container .error-message p {
+  color: #cf253a;
+  font-size: .9rem;
+  margin: 0;
+}
 .games-container {
   padding-right: 350px;
 }
@@ -344,12 +360,5 @@ input:focus:-ms-input-placeholder {
   font-size: 1.2rem;
   padding: .6rem 1.5rem;
   vertical-align: bottom;
-}
-section.auth-container {
-  background-color: #a19d9d;
-  width: 350px;
-  box-sizing: border-box;
-  padding: 2rem;
-  margin: 25vh auto;
 }
 /*endinjector*/

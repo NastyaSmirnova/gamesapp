@@ -11,6 +11,8 @@
       authService
     ) {
       var user = {};
+      var self = this;
+
       $scope.currentAction = $state.current.action;
 
       $rootScope.$on('$stateChangeStart', function (event, state) {
@@ -23,8 +25,7 @@
             return login(user);
           })
           .catch(function (error) {
-            // this.error = error;
-            console.log(error);
+            self.error = error.message;
           });
       }
 
@@ -32,15 +33,13 @@
         return authService.login(user)
           .then(function () {
             $location.path('/games');
-            console.log('success');
           })
           .catch(function (error) {
-            // this.error = error;
-            console.log(error);
+            self.error = error.message;
           });
       }
 
-      angular.extend(this, {
+      angular.extend(self, {
         user: user,
         signup: {
           action: signup,

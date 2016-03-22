@@ -4,4 +4,13 @@ section.auth-container {
   box-sizing: border-box;
   padding: 2rem;
   margin: 25vh auto;
+  .error-message {
+    margin-bottom: 2rem;
+    text-align: center;
+    p {
+      color: $red;
+      font-size: .9rem;
+      margin: 0;
+    }
+  }
 }

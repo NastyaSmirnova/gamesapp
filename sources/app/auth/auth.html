@@ -11,6 +11,7 @@
       id="email"
       name="email"
       placeholder="johndoe@gmail.com"
+      data-ng-change="auth.error = ''"
       data-ng-model="auth.user.email"
       required>
     </div>
@@ -21,8 +22,12 @@
       id="password"
       name="password"
       placeholder="johndoepass"
+      data-ng-change="auth.error = ''"
       data-ng-model="auth.user.password"
       required>
+    </div>
+    <div class="error-message">
+      <p data-ng-bind="auth.error"></p>
     </div>
     <button
       type="submit"
