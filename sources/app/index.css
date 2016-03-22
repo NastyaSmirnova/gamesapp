@@ -37,6 +37,8 @@ header {
     width: 150px;
     a {
       font-size: 1.5rem;
+
+      line-height: 70px;
     }
   }
   .user {
@@ -56,14 +58,6 @@ header {
   }
   a {
     color: $white;
-  }
-  nav a {
-    line-height: 70px;
-    margin-right: 1rem;
-    display: inline-block;
-    &.active {
-      color: $yellow;
-    }
   }
 }
 
@@ -183,5 +177,4 @@ input:focus:-ms-input-placeholder {
 /*injector*/
 @import 'auth/auth.css';
 @import 'games/games.css';
-@import 'users/users.css';
 /*endinjector*/

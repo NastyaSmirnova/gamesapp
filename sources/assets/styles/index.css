@@ -35,6 +35,7 @@ header .logo {
 
 header .logo a {
   font-size: 1.5rem;
+  line-height: 70px;
 }
 
 header .user {
@@ -57,16 +58,6 @@ header .user a.login {
 
 header a {
   color: #e3dede;
-}
-
-header nav a {
-  line-height: 70px;
-  margin-right: 1rem;
-  display: inline-block
-}
-
-header nav a.active {
-  color: #f6ea8c;
 }
 
 aside {
