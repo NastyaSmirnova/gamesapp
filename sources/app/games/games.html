@@ -8,7 +8,7 @@
       | filter:search
       | startFrom:currentPage*pageSize
       | limitTo:pageSize)
-      | orderBy:sortType:false
+      | orderBy:sortType:true
       track by game.$id"
       data-ng-style="{ 'background-image': 'url(' + game.imageUrl + ')' }">
       <div class="games-rating">
