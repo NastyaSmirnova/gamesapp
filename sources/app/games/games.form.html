@@ -15,11 +15,31 @@
   </div>
   <div class="rating">
     <label>Rating</label>
-    <span>&#9734;</span>
-    <span>&#9734;</span>
-    <span>&#9734;</span>
-    <span>&#9733;</span>
-    <span>&#9733;</span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 5;"
+      data-ng-bind="edit.current.rating >= 5 ? '&#9733;' : '&#9734;'">
+    </span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 4;"
+      data-ng-bind="edit.current.rating >= 4 ? '&#9733;' : '&#9734;'">
+    </span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 3;"
+      data-ng-bind="edit.current.rating >= 3 ? '&#9733;' : '&#9734;'">
+    </span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 2;"
+      data-ng-bind="edit.current.rating >= 2 ? '&#9733;' : '&#9734;'">
+    </span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 1;"
+      data-ng-bind="edit.current.rating >= 1 ? '&#9733;' : '&#9734;'">
+    </span>
   </div>
   <div class="number-input">
     <label for="name">Spent Hours</label>

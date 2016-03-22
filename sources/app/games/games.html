@@ -5,11 +5,11 @@
     </section>
     <section data-ng-repeat="game in (gamesList = games.list | filter:search) | orderBy:sortType:false">
       <div class="games-rating">
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9734;</span>
-        <span>&#9733;</span>
+        <span data-ng-bind="game.rating >= 5 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 4 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 3 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 2 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 1 ? '&#9733;' : '&#9734;'"></span>
       </div>
       <div class="games-time">
         <span>&#9719;&nbsp;<span data-ng-bind="game.time"></span></span>
