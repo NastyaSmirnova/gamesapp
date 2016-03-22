@@ -13,7 +13,8 @@
         Game: Game,
         getGames: getGames,
         save: saveGame,
-        update: updateGame
+        update: updateGame,
+        delete: deleteGame
       };
 
       var gamesData = $firebaseArray(firebaseDataService.games);
@@ -34,6 +35,10 @@
 
       function saveGame (game) {
         gamesData.$add(game);
+      }
+
+      function deleteGame (game) {
+        gamesData.$remove(game);
       }
 
       function updateGame (game) {

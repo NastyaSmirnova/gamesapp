@@ -82,5 +82,27 @@
       data-ui-sref="games">
       Cancel
     </a>
+    <a
+      type="button"
+      class="delete"
+      data-ng-show="edit.current.$id"
+      data-ng-click="edit.showWarning = true;">
+      Delete
+    </a>
+    <div class="warning-message" data-ng-show="edit.showWarning">
+      <p>Are you sure you want to delete this game?</p>
+      <a
+        type="button"
+        data-ui-sref="games"
+        data-ng-click="edit.deleteGame(edit.current);">
+        Yes
+      </a>
+      <a
+        type="button"
+        class="white"
+        data-ng-click="edit.showWarning = false;">
+        No
+      </a>
+    </div>
   </div>
 </form>

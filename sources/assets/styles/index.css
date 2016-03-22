@@ -199,13 +199,6 @@ input:focus:-ms-input-placeholder {
 }
 
 /*injector*/
-section.auth-container {
-  background-color: #a19d9d;
-  width: 350px;
-  box-sizing: border-box;
-  padding: 2rem;
-  margin: 25vh auto;
-}
 .games-container {
   padding-right: 350px;
 }
@@ -309,10 +302,29 @@ section.auth-container {
 .games-container aside form .actions {
   text-align: center;
 }
+.games-container aside form .actions .warning-message {
+  display: block;
+  color: #e3dede;
+}
+.games-container aside form .actions .warning-message p {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
 .games-container aside form .actions button, .games-container aside form .actions a[type=button] {
   display: inline-block;
-  padding: .2rem;
-  margin: .5rem;
+  padding: .1rem;
+  margin: .3rem;
+  width: 80px;
+}
+.games-container aside form .actions button:last-child, .games-container aside form .actions a[type=button]:last-child {
+  margin-right: 0;
+}
+.games-container aside form .actions button:first-child, .games-container aside form .actions a[type=button]:first-child {
+  margin-left: 0;
+}
+.games-container aside form .actions button.delete, .games-container aside form .actions a[type=button].delete {
+  color: #8b8687;
+  border-color: #8b8687;
 }
 .games-container aside .message-info {
   margin-top: 25vh;
@@ -332,5 +344,12 @@ section.auth-container {
   font-size: 1.2rem;
   padding: .6rem 1.5rem;
   vertical-align: bottom;
+}
+section.auth-container {
+  background-color: #a19d9d;
+  width: 350px;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin: 25vh auto;
 }
 /*endinjector*/

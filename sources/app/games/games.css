@@ -103,10 +103,29 @@
       }
       .actions {
         text-align: center;
+        .warning-message {
+          display: block;
+          color: $white;
+          p {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+          }
+        }
         button, a[type=button] {
           display: inline-block;
-          padding: .2rem;
-          margin: .5rem;
+          padding: .1rem;
+          margin: .3rem;
+          width: 80px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &.delete {
+            color: $gray;
+            border-color: $gray;
+          }
         }
       }
     }

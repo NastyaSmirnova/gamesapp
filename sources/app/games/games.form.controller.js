@@ -33,9 +33,14 @@
         $location.path('/games');
       }
 
+      function deleteGame (game) {
+        gamesService.delete(current);
+      }
+
       angular.extend(self, {
         current: current,
-        saveGame: saveGame
+        saveGame: saveGame,
+        deleteGame: deleteGame
       });
     });
 
