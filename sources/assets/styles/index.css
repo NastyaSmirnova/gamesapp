@@ -77,6 +77,30 @@ aside {
   cursor: pointer;
 }
 
+.pagination {
+  text-align: center;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: 1px solid #e3dede;
+  color: #e3dede;
+  border-radius: 1000px;
+  width: 100px;
+  line-height: 2;
+  margin: 0 auto
+}
+
+.pagination button[disabled=disabled] {
+  color: #a19d9d;
+  border-color: #a19d9d;
+}
+
+.pagination span {
+  margin: 0 1rem;
+  color: #e3dede;
+}
+
 form label {
   display: block;
   color: #333030;

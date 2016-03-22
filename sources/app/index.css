@@ -78,6 +78,27 @@ aside {
   cursor: pointer;
 }
 
+.pagination {
+  text-align: center;;
+  button {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: 1000px;
+    width: 100px;
+    line-height: 2;
+    margin: 0 auto;
+    &[disabled=disabled] {
+      color: $lightGray;
+      border-color: $lightGray;
+    }
+  }
+  span {
+    margin: 0 1rem;
+    color: $white;
+  }
+}
+
 form {
   label {
     display: block;
