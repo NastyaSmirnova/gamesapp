@@ -16,16 +16,18 @@
 
       if ($stateParams.id !== 0) {
         gamesService.getGames().$loaded().then(function (games) {
-          self.current = games.$getRecord($stateParams.id);
+          current = games.$getRecord($stateParams.id);
+          angular.extend(self.current, current);
         });
       }
 
-
       function saveGame (game) {
-        if (game.$id) {
-          gamesService.update(game);
+        angular.extend(current, game);
+
+        if (current.$id) {
+          gamesService.update(current);
         } else {
-          gamesService.save(game);
+          gamesService.save(current);
         }
 
         $scope.games.formOpen = false;
