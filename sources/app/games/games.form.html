@@ -41,6 +41,15 @@
       data-ng-bind="edit.current.rating >= 1 ? '&#9733;' : '&#9734;'">
     </span>
   </div>
+  <div data-ng-class="{ 'error': gamesForm.url.$invalid && edit.submitted }">
+    <label for="name">Background Image URL</label>
+    <input
+      type="url"
+      id="url"
+      name="url"
+      placeholder="e.g.: http://www.somehost.com/logo.png"
+      data-ng-model="edit.current.imageUrl">
+  </div>
   <div class="number-input">
     <label for="name">Spent Hours</label>
     <button

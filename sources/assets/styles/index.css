@@ -206,6 +206,10 @@ section.auth-container {
   vertical-align: top;
   text-align: center;
   position: relative;
+
+  /*&:not(.games-new) {
+        background-image: url('http://www.theportlandarms.co.uk/UserFiles/Image/Poker/PortlandPokerLogo.gif');
+      } */
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -220,7 +224,7 @@ section.auth-container {
   padding: 1rem;
 }
 .games-container .games-list section .games-rating span {
-  cursor: pointer;
+  cursor: default;
 }
 .games-container .games-list section .games-time {
   position: absolute;
@@ -240,9 +244,6 @@ section.auth-container {
   background-color: rgba(227, 222, 222, .5);
   line-height: 3rem;
   color: #f6ea8c;
-}
-.games-container .games-list section:not(.games-new) {
-  background-image: url('http://www.theportlandarms.co.uk/UserFiles/Image/Poker/PortlandPokerLogo.gif');
 }
 .games-container .games-list section:after {
   content: '';

@@ -5,7 +5,6 @@
     padding: 2rem;
     box-sizing: border-box;
     section {
-      /*background-color: $lightGray;*/
       height: 200px;
       color: $white;
       width: 31%;
@@ -14,9 +13,6 @@
       vertical-align: top;
       text-align: center;
       position: relative;
-      &:not(.games-new) {
-        background-image: url('http://www.theportlandarms.co.uk/UserFiles/Image/Poker/PortlandPokerLogo.gif');
-      }
       background-size: 60%;
       background-repeat: no-repeat;
       background-position: center center;
