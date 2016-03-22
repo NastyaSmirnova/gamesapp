@@ -22,12 +22,11 @@
       }
 
       function saveGame (game) {
-        angular.extend(current, game);
-
-        if (current.$id) {
+        if (game.$id) {
+          angular.extend(current, game);
           gamesService.update(current);
         } else {
-          gamesService.save(current);
+          gamesService.save(game);
         }
 
         $scope.games.formOpen = false;
