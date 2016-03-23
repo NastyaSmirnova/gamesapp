@@ -6,7 +6,8 @@
     .controller('MainCtrl', function (
       $scope,
       $location,
-      authService
+      authService,
+      gamesService
     ) {
       $scope.currentPage = 0;
 
@@ -15,6 +16,7 @@
       };
 
       $scope.logOut = function () {
+        gamesService.reset();
         $location.path('/auth/login');
         authService.logout();
       };
