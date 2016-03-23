@@ -1,3 +1,8 @@
+/**
+ *
+ * Games Module initialization
+ *
+ */
 (function() {
 
   'use strict';

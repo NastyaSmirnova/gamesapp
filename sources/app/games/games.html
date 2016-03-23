@@ -6,7 +6,7 @@
     <section
       data-ng-repeat="game in (gamesList = games.list
       | filter:search
-      | startFrom:currentPage*pageSize
+      | startFrom:games.currentPage * pageSize
       | limitTo:pageSize)
       | orderBy:sortType:true
       track by game.$id"
@@ -29,14 +29,14 @@
   </div>
   <div class="pagination" data-ng-show="pageSize">
     <button
-      data-ng-disabled="currentPage == 0"
-      data-ng-click="currentPage = currentPage - 1;">
+      data-ng-disabled="games.currentPage == 0"
+      data-ng-click="games.currentPage = games.currentPage - 1;">
       Previous
     </button>
-    <span data-ng-bind="currentPage + 1 + '/' + numberOfPages(gamesList.length, pageSize)"></span>
+    <span data-ng-bind="games.currentPage + 1 + '/' + games.numberOfPages(gamesList.length, pageSize)"></span>
     <button
-      data-ng-disabled="currentPage >= gamesList.length / pageSize - 1"
-      data-ng-click="currentPage = currentPage + 1;">
+      data-ng-disabled="games.currentPage >= gamesList.length / pageSize - 1"
+      data-ng-click="games.currentPage = games.currentPage + 1;">
       Next
     </button>
   </div>

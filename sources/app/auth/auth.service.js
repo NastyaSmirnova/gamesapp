@@ -1,4 +1,20 @@
-(function() {
+/**
+ * AuthService Factory
+ *
+ * Injections:
+ *
+ *  third party services:
+ *    - $firebaseArray
+ *
+ *  custom services:
+ *    - firebaseDataService
+ *
+ * @desc Defines login, register, logout, isLoggedIn methods for user
+ *
+ * @returns {Object} Object of promises
+ *
+ */
+(function () {
   'use strict';
 
   angular

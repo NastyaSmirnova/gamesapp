@@ -1,4 +1,9 @@
-(function() {
+/**
+ *
+ * Auth Module initialization
+ *
+ */
+(function () {
 
   'use strict';
 

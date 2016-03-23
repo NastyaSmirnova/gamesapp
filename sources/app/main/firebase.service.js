@@ -1,19 +1,31 @@
+/**
+ * FirebaseDataService Factory
+ *
+ *  Injections:
+ *    - Settings
+ *
+ *  @desc Connects to Firebase DB
+ *
+ *  @return {Object} returns db collections
+ */
 (function() {
+
   'use strict';
 
   angular
     .module('app')
-    .factory('firebaseDataService', function (Settings) {
-        var firebaseUrl = Settings.firebaseUrl;
-        var root = new Firebase(firebaseUrl);
+    .factory('firebaseDataService', function (
+      Settings
+    ) {
+      var firebaseUrl = Settings.firebaseUrl;
+      var root = new Firebase(firebaseUrl);
 
-        var service = {
-          root: root,
-          users: root.child('users'),
-          games: root.child('games')
-        };
+      var service = {
+        root: root,
+        users: root.child('users')
+      };
 
-        return service;
-      });
+      return service;
+    });
 
 })();

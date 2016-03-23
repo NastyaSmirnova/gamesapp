@@ -1,4 +1,19 @@
-(function() {
+/**
+ * Games app Main Controller
+ *
+ * Injections:
+ *
+ *  built-in services:
+ *    - $scope
+ *    - $location
+ *
+ *  custom services:
+ *    - authService
+ *    - gamesService
+ *
+ */
+(function () {
+
   'use strict';
 
   angular
@@ -9,11 +24,14 @@
       authService,
       gamesService
     ) {
-      $scope.currentPage = 0;
 
-      $scope.numberOfPages = function (dlength, psize) {
-        return Math.ceil(dlength / psize);
-      };
+      /**
+       * LogOut function
+       *
+       * @desc Resets Firebase connection,
+       *       logs user out of the application,
+       *       changes location to login page.
+       */
 
       $scope.logOut = function () {
         gamesService.reset();

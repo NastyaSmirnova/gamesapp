@@ -1,4 +1,21 @@
-(function() {
+/**
+ * GamesService Factory
+ *
+ * Injections:
+ *
+ *  third party services:
+ *    - $firebaseArray
+ *    - $rootScope
+ *
+ *  custom services:
+ *    - firebaseDataService
+ *
+ * @desc Defines get/create/update/delete handlers for games
+ *
+ * @returns {Object} Object of handlers
+ *
+ */
+(function () {
   'use strict';
 
   angular
@@ -12,7 +29,7 @@
       var games = null;
       var service = {
         Game: Game,
-        getGames: getGames,
+        // getGames: getGames,
         save: saveGame,
         update: updateGame,
         getUserGames: getUserGames,
@@ -22,6 +39,11 @@
 
       // var gamesData = $firebaseArray(firebaseDataService.games);
 
+      /**
+       * Game - Constructor
+       *
+       * @desc define default params for game
+       */
       function Game () {
         angular.extend(this, {
           name: '',
@@ -39,9 +61,9 @@
         return games;
       }
 
-      function getGames () {
-        // return gamesData;
-      }
+      // function getGames () {
+      //   return gamesData;
+      // }
 
       function saveGame (game) {
         games.$add(game);
@@ -57,6 +79,12 @@
         games.$save(item);
       }
 
+      /**
+       * reset - Function
+       *
+       * @desc Resets connection to firebase db
+       *       
+       */
       function reset () {
         if (games) {
           games.$destroy();
