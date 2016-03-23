@@ -43,12 +43,16 @@ header .user {
   padding: 18px 0;
 }
 
+header .user span {
+  color: #f6ea8c
+}
+
 header .user a {
   display: inline-block;
   border: 1px solid #e3dede;
   border-radius: 1000px;
   padding: .5rem 1rem;
-  margin-left: 2rem
+  margin-left: 1rem
 }
 
 header .user a.login {

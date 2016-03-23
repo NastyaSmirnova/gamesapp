@@ -44,12 +44,15 @@ header {
   .user {
     float: right;
     padding: 18px 0;
+    span {
+      color: $yellow
+    }
     a {
       display: inline-block;
       border: 1px solid $white;
       border-radius: 1000px;
       padding: .5rem 1rem;
-      margin-left: 2rem;
+      margin-left: 1rem;
       &.login {
         color: $yellow;
         border-color: $yellow;

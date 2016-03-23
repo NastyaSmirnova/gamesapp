@@ -25,7 +25,8 @@
       <a data-ui-sref="auth.login" class="login pointer ng-hide" data-ng-show="!me.status">
         Log in
       </a>
-      <a data-ng-click="logOut();" class="login pointer ng-hide" data-ng-show="me.status">
+      <span data-ng-bind="me.email"></span>
+      <a data-ng-click="logOut();" class=" pointer ng-hide" data-ng-show="me.status">
         Log out
       </a>
     </div>
