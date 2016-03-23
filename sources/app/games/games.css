@@ -86,7 +86,6 @@
         input {
           width: 3rem;
           text-align: center;
-          padding-left: .6rem;
         }
         button {
           border: 1px solid $white;

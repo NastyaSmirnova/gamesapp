@@ -204,6 +204,13 @@ input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 /*injector*/
 section.auth-container {
@@ -308,7 +315,6 @@ section.auth-container .error-message p {
 .games-container aside form .number-input input {
   width: 3rem;
   text-align: center;
-  padding-left: .6rem;
 }
 .games-container aside form .number-input button {
   border: 1px solid #e3dede;

@@ -200,6 +200,14 @@ input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 /*injector*/
 @import 'auth/auth.css';
