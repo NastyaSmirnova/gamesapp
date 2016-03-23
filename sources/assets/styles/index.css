@@ -355,7 +355,7 @@ section.auth-container .error-message p {
   font-size: 1.2rem;
   color: #e3dede;
 }
-.games-container aside .message-info button {
+.games-container aside .message-info a {
   background-color: transparent;
   border: 1px solid #f6ea8c;
   color: #f6ea8c;

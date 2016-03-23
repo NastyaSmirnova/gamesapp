@@ -43,7 +43,7 @@
   <aside>
     <div class="message-info" data-ng-hide="games.formOpen || gamesList.length">
       <p>You don't play any game now</p>
-      <button>Let's have some fun!</button>
+      <a data-ui-sref=".edit({ id: 0 })">Let's have some fun!</a>
     </div>
     <div class="games-filters" data-ng-hide="games.formOpen || !gamesList.length">
       <form action="">
