@@ -12,11 +12,11 @@
       track by game.$id"
       data-ng-style="{ 'background-image': 'url(' + game.imageUrl + ')' }">
       <div class="games-rating">
-        <span data-ng-bind="game.rating >= 5 ? '&#9733;' : '&#9734;'"></span>
-        <span data-ng-bind="game.rating >= 4 ? '&#9733;' : '&#9734;'"></span>
-        <span data-ng-bind="game.rating >= 3 ? '&#9733;' : '&#9734;'"></span>
-        <span data-ng-bind="game.rating >= 2 ? '&#9733;' : '&#9734;'"></span>
         <span data-ng-bind="game.rating >= 1 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 2 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 3 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 4 ? '&#9733;' : '&#9734;'"></span>
+        <span data-ng-bind="game.rating >= 5 ? '&#9733;' : '&#9734;'"></span>
       </div>
       <div class="games-time">
         <span>&#9719;&nbsp;<span data-ng-bind="game.time"></span></span>

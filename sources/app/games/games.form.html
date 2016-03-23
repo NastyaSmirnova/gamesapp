@@ -17,18 +17,8 @@
     <label>Rating</label>
     <span
       class="pointer"
-      data-ng-click="edit.current.rating = 5;"
-      data-ng-bind="edit.current.rating >= 5 ? '&#9733;' : '&#9734;'">
-    </span>
-    <span
-      class="pointer"
-      data-ng-click="edit.current.rating = 4;"
-      data-ng-bind="edit.current.rating >= 4 ? '&#9733;' : '&#9734;'">
-    </span>
-    <span
-      class="pointer"
-      data-ng-click="edit.current.rating = 3;"
-      data-ng-bind="edit.current.rating >= 3 ? '&#9733;' : '&#9734;'">
+      data-ng-click="edit.current.rating = 1;"
+      data-ng-bind="edit.current.rating >= 1 ? '&#9733;' : '&#9734;'">
     </span>
     <span
       class="pointer"
@@ -37,8 +27,18 @@
     </span>
     <span
       class="pointer"
-      data-ng-click="edit.current.rating = 1;"
-      data-ng-bind="edit.current.rating >= 1 ? '&#9733;' : '&#9734;'">
+      data-ng-click="edit.current.rating = 3;"
+      data-ng-bind="edit.current.rating >= 3 ? '&#9733;' : '&#9734;'">
+    </span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 4;"
+      data-ng-bind="edit.current.rating >= 4 ? '&#9733;' : '&#9734;'">
+    </span>
+    <span
+      class="pointer"
+      data-ng-click="edit.current.rating = 5;"
+      data-ng-bind="edit.current.rating >= 5 ? '&#9733;' : '&#9734;'">
     </span>
   </div>
   <div data-ng-class="{ 'error': gamesForm.url.$invalid && edit.submitted }">
