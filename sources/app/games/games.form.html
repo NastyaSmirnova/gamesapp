@@ -50,23 +50,24 @@
       placeholder="e.g.: http://www.somehost.com/logo.png"
       data-ng-model="edit.current.imageUrl">
   </div>
-  <div class="number-input">
+  <div class="number-input" data-ng-class="{ 'error': gamesForm.time.$invalid && edit.submitted }">
     <label for="name">Spent Hours</label>
     <button
-      data-ng-click="edit.current.time = edit.current.time + 1;"
+      data-ng-click="edit.current.time = edit.current.time - 1;"
       type="button">
-      +
+      -
     </button>
     <input
       type="number"
       id="time"
       name="time"
       placeholder="0"
+      data-ng-min="0"
       data-ng-model="edit.current.time">
     <button
-      data-ng-click="edit.current.time = edit.current.time - 1;"
+      data-ng-click="edit.current.time = edit.current.time + 1;"
       type="button">
-      -
+      +
     </button>
   </div>
   <div class="actions">
