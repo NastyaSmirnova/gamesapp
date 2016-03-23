@@ -84,7 +84,7 @@
     </a>
     <a
       type="button"
-      class="delete"
+      class="delete pointer"
       data-ng-show="edit.current.$id"
       data-ng-click="edit.showWarning = true;">
       Delete
@@ -93,13 +93,14 @@
       <p>Are you sure you want to delete this game?</p>
       <a
         type="button"
+        class="pointer"
         data-ui-sref="games"
         data-ng-click="edit.deleteGame(edit.current);">
         Yes
       </a>
       <a
         type="button"
-        class="white"
+        class="white pointer"
         data-ng-click="edit.showWarning = false;">
         No
       </a>
