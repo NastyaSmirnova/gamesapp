@@ -3,9 +3,13 @@
 
   angular
     .module('app.games')
-    .controller('GamesCtrl', function (gamesService) {
-      var games = gamesService.getGames();
-      
+    .controller('GamesCtrl', function (
+      $rootScope,
+      gamesService
+    ) {
+      var uid = $rootScope.me.uid;
+      var games = gamesService.getUserGames(uid);
+
       angular.extend(this, {
         list: games
       });

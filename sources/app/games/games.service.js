@@ -9,42 +9,59 @@
       firebaseDataService
     ) {
 
+      var games = null;
       var service = {
         Game: Game,
         getGames: getGames,
         save: saveGame,
         update: updateGame,
+        getUserGames: getUserGames,
+        reset: reset,
         delete: deleteGame
       };
 
-      var gamesData = $firebaseArray(firebaseDataService.games);
+      // var gamesData = $firebaseArray(firebaseDataService.games);
 
       function Game () {
         angular.extend(this, {
           name: '',
-          userId: $rootScope.me.uid,
+          // userId: $rootScope.me.uid,
           time: 0,
           rating: 0,
           timestamp: Date.now()
         });
       }
 
+      function getUserGames (uid) {
+        if (!games) {
+          games = $firebaseArray(firebaseDataService.users.child(uid).child('games'));
+        }
+        return games;
+      }
+
       function getGames () {
-        return gamesData;
+        // return gamesData;
       }
 
       function saveGame (game) {
-        gamesData.$add(game);
+        games.$add(game);
       }
 
       function deleteGame (game) {
-        gamesData.$remove(game);
+        games.$remove(game);
       }
 
       function updateGame (game) {
-        var item = gamesData.$getRecord(game.$id);
+        var item = games.$getRecord(game.$id);
 
-        gamesData.$save(item);
+        games.$save(item);
+      }
+
+      function reset () {
+        if (games) {
+          games.$destroy();
+          games = null;
+        }
       }
 
       return service;

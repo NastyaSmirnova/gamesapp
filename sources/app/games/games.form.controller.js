@@ -15,7 +15,7 @@
       var current = new gamesService.Game();
 
       if ($stateParams.id !== 0) {
-        gamesService.getGames().$loaded().then(function (games) {
+        gamesService.getUserGames().$loaded().then(function (games) {
           current = games.$getRecord($stateParams.id);
           angular.extend(self.current, current);
         });
